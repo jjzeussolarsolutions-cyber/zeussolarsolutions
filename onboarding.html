@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Request a Free Quote | Zeus Solar Solutions</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F3F6FF;--surface:#FFFFFF;--ink:#0B2478;--muted:#5A6A99;--line:#D6DEF5;--navy:#0B2478;--blue:#1B46C2;--orange:#F26B21;--gold:#FFC20E;--bad:#C8302B;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#081235;--surface:#11245E;--ink:#EEF2FA;--muted:#A5B2D0;--line:#26386C;--navy:#061344;--blue:#2D5BE0;--bad:#FF7A72}}
+:root[data-theme="dark"]{--bg:#081235;--surface:#11245E;--ink:#EEF2FA;--muted:#A5B2D0;--line:#26386C;--navy:#061344;--blue:#2D5BE0;--bad:#FF7A72}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.5 "Public Sans",system-ui,sans-serif}
+h1,h2{font-family:Archivo,system-ui,sans-serif;margin:0}
+a{color:var(--orange)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+nav{background:var(--navy);color:#fff;position:sticky;top:env(safe-area-inset-top,0px);z-index:5}
+nav .in{max-width:1040px;margin:0 auto;padding:0 20px;height:54px;display:flex;align-items:center;justify-content:space-between}
+nav b{font:900 17px Archivo,sans-serif;letter-spacing:.04em}nav b span{color:var(--gold)}
+nav a{color:#fff;text-decoration:none;font-size:14px}
+.hero{background:radial-gradient(circle at 50% 0,var(--blue) 0,var(--navy) 70%);color:#fff;text-align:center;padding:56px 20px 110px}
+.hero h1{font-size:clamp(34px,7vw,60px);font-weight:900;line-height:1.05;max-width:14ch;margin:0 auto 16px}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero p{max-width:52ch;margin:0 auto;color:#D3DBEE;font-size:17px}
+.card{max-width:560px;margin:-70px auto 28px;background:var(--surface);border-radius:16px;padding:28px;box-shadow:0 12px 40px rgba(6,19,68,.18);position:relative}
+.row{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.f{margin-bottom:14px}
+label{display:block;font-weight:600;font-size:15px;margin-bottom:6px}
+label i{color:var(--bad);font-style:normal}
+input,select,textarea{width:100%;padding:12px;font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px}
+textarea{min-height:84px;resize:vertical}
+input.bad,select.bad{border-color:var(--bad)}
+.err{color:var(--bad);font-size:13px;margin-top:4px;min-height:0}
+.hint{color:var(--muted);font-size:13px;margin-top:4px}
+.sec{border-top:1px solid var(--line);margin-top:20px;padding-top:18px}
+.sec h2{font:700 13px Archivo,sans-serif;letter-spacing:.08em;color:var(--muted);text-transform:uppercase}
+.sec p{margin:2px 0 14px;color:var(--muted);font-size:13px}
+.ph{display:flex;gap:8px}
+.ph span{flex:none;padding:12px;background:var(--bg);border:1px solid var(--line);border-radius:8px}
+.pin{background:#FFF4D6;color:#7A5600;border:1px solid var(--gold);padding:10px 16px;border-radius:999px;font:600 15px "Public Sans",sans-serif;cursor:pointer}
+.pin.ok{background:#DDF5E3;border-color:#3BA55C;color:#14602B}
+.chk{display:flex;gap:10px;align-items:flex-start;font-size:14px}
+.chk input{width:20px;margin-top:3px}
+.btn{display:block;width:100%;background:var(--gold);color:#0B2478;border:0;border-radius:999px;padding:15px;font:800 17px Archivo,sans-serif;cursor:pointer;text-align:center;text-decoration:none}
+.btn.alt{background:var(--navy);color:#fff;margin-top:10px}
+.small{text-align:center;color:var(--muted);font-size:13px;margin-top:10px}
+.hp{position:absolute;left:-9999px}
+#done{display:none}
+#done h2{font-size:28px;margin-bottom:8px}
+#sum{min-height:170px;font-size:13px}
+footer{text-align:center;color:var(--muted);font-size:14px;padding:6px 20px 40px}
+</style>
+</head>
+<body>
+<nav><div class="in"><b>ZEUS <span>SOLAR</span></b><a href="index.html">&larr; Back to packages</a></div></nav>
+
+<header class="hero">
+<h1>Tell us about your <em>property</em></h1>
+<p>Share a few details and our team will reach out. No commitment, we just want to understand your project.</p>
+</header>
+
+<main class="card">
+<form id="form" novalidate>
+<div class="row">
+<div class="f"><label for="fn">First name <i>*</i></label><input id="fn" autocomplete="given-name" placeholder="Juan"><div class="err" id="e-fn"></div></div>
+<div class="f"><label for="ln">Last name <i>*</i></label><input id="ln" autocomplete="family-name" placeholder="Dela Cruz"><div class="err" id="e-ln"></div></div>
+</div>
+<div class="f"><label for="mob">Mobile number <i>*</i></label><div class="ph"><span>🇵🇭 +63</span><input id="mob" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="945 433 8581"></div><div class="err" id="e-mob"></div></div>
+<div class="f"><label for="em">Email address <i>*</i></label><input id="em" type="email" autocomplete="email" placeholder="juan@example.com"><div class="hint">We may reach out here, so please double-check it.</div><div class="err" id="e-em"></div></div>
+<div class="f"><label for="type">I am a <i>*</i></label><select id="type"><option value="">Select an option</option><option>Homeowner</option><option>Start-up or small business</option><option>Large company or industrial</option></select><div class="err" id="e-type"></div></div>
+
+<div class="sec"><h2>Installation address</h2><p>Where the solar system would be installed. Helps us plan your site assessment. We serve Mindanao-wide.</p>
+<div class="f"><label for="st">House / Lot / Street <i>*</i></label><input id="st" autocomplete="address-line1" placeholder="Blk 1 Lot 2, Sampaguita St"><div class="err" id="e-st"></div></div>
+<div class="f"><label for="br">Barangay <i>*</i></label><input id="br" placeholder="Barangay Buhangin"><div class="err" id="e-br"></div></div>
+<div class="row">
+<div class="f"><label for="ct">City / Municipality <i>*</i></label><input id="ct" placeholder="Davao City"><div class="err" id="e-ct"></div></div>
+<div class="f"><label for="pv">Province <i>*</i></label><input id="pv" list="prov" placeholder="Davao del Sur"><div class="err" id="e-pv"></div></div>
+</div>
+<datalist id="prov"><option>Agusan del Norte</option><option>Agusan del Sur</option><option>Basilan</option><option>Bukidnon</option><option>Camiguin</option><option>Cotabato</option><option>Davao de Oro</option><option>Davao del Norte</option><option>Davao del Sur</option><option>Davao Occidental</option><option>Davao Oriental</option><option>Dinagat Islands</option><option>Lanao del Norte</option><option>Lanao del Sur</option><option>Maguindanao del Norte</option><option>Maguindanao del Sur</option><option>Misamis Occidental</option><option>Misamis Oriental</option><option>Sarangani</option><option>South Cotabato</option><option>Sultan Kudarat</option><option>Sulu</option><option>Surigao del Norte</option><option>Surigao del Sur</option><option>Tawi-Tawi</option><option>Zamboanga del Norte</option><option>Zamboanga del Sur</option><option>Zamboanga Sibugay</option></datalist>
+<button type="button" class="pin" id="pin">Pin my exact location</button>
+<div class="hint" id="pinmsg">Strongly recommended. Tap this while you are at the property so our team can find you exactly.</div>
+</div>
+
+<div class="sec"><h2>Tell us more (optional)</h2>
+<div class="f" style="margin-top:14px"><label for="bill">Average monthly electric bill</label><input id="bill" type="number" min="0" inputmode="numeric" placeholder="PHP 8,000"><div class="hint">Helps us size the right system for you.</div></div>
+<div class="f"><label for="pkg">Which package interests you?</label><select id="pkg"><option>Not sure yet</option><option>3KW Ready Package</option><option>6KW Ready Package</option><option>8KW Ready Package</option><option>10KW Ready Package</option><option>Larger or commercial system</option></select></div>
+<div class="f"><label for="how">How did you hear about us?</label><select id="how"><option value="">Select an option</option><option>Facebook</option><option>Instagram</option><option>TikTok</option><option>Friend or family</option><option>Event or walk-in</option><option>Other</option></select></div>
+<div class="f"><label for="more">Anything else?</label><textarea id="more" maxlength="1000" placeholder="Questions, special requirements, details about your property..."></textarea></div>
+</div>
+
+<input class="hp" id="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+<div class="sec"><label class="chk"><input type="checkbox" id="ok"><span>I agree that Zeus Solar Solutions may contact me about my solar inquiry. <i style="color:var(--bad);font-style:normal">*</i></span></label><div class="err" id="e-ok"></div></div>
+<button class="btn" type="submit" style="margin-top:16px">Send my details</button>
+<div class="small">No spam. We only use this to follow up on your solar inquiry.</div>
+</form>
+
+<div id="done">
+<h2 id="dt">Almost done!</h2>
+<p id="dp">Choose how to send your details to our team. Your message is ready.</p>
+<div id="send">
+<a class="btn" id="mail" href="#">Send by email</a>
+<a class="btn alt" id="msgr" href="https://m.me/ZeusSolarSolutions" target="_blank" rel="noopener">Copy and open Messenger</a>
+<div class="f" style="margin-top:16px"><label for="sum">Your details</label><textarea id="sum" readonly></textarea></div>
+</div>
+</div>
+</main>
+<footer>Zeus Solar Solutions &middot; Davao City &middot; <a href="tel:09454338581">09454338581</a> &middot; <a href="mailto:jj.zeussolarsolutions@gmail.com">jj.zeussolarsolutions@gmail.com</a></footer>
+
+<script>
+// To receive submissions in your inbox automatically, create a free form at formspree.io and paste its URL here.
+var FORM_ENDPOINT="";
+var EMAIL="jj.zeussolarsolutions@gmail.com";
+var pos=null;
+function $(i){return document.getElementById(i)}
+var req={fn:"First name",ln:"Last name",mob:"Mobile number",em:"Email address",type:"Please choose one",st:"House / Lot / Street",br:"Barangay",ct:"City / Municipality",pv:"Province"};
+function mobDigits(){var d=$("mob").value.replace(/\D/g,"");if(d.indexOf("63")===0)d=d.slice(2);if(d.charAt(0)==="0")d=d.slice(1);return d}
+function bad(id,msg){$(id).classList.add("bad");$("e-"+id).textContent=msg;return 1}
+function validate(){var n=0,first=null;
+Object.keys(req).forEach(function(k){$(k).classList.remove("bad");$("e-"+k).textContent="";
+if(!$(k).value.trim()){n+=bad(k,req[k]+(k==="type"?".":" is required."));first=first||k}});
+if($("mob").value.trim()&&!/^9\d{9}$/.test(mobDigits())){n+=bad("mob","Enter a valid PH mobile number, like 0945 433 8581.");first=first||"mob"}
+if($("em").value.trim()&&!/^\S+@\S+\.\S+$/.test($("em").value.trim())){n+=bad("em","Enter a valid email address.");first=first||"em"}
+$("e-ok").textContent="";if(!$("ok").checked){$("e-ok").textContent="Please agree so we can contact you.";n++;first=first||"ok"}
+if(first)$(first).focus();return n===0}
+function summary(){var L=["New solar inquiry","Name: "+$("fn").value.trim()+" "+$("ln").value.trim(),"Mobile: 0"+mobDigits(),"Email: "+$("em").value.trim(),"Customer type: "+$("type").value,
+"Address: "+$("st").value.trim()+", "+$("br").value.trim()+", "+$("ct").value.trim()+", "+$("pv").value.trim()];
+if(pos)L.push("Pinned location: https://maps.google.com/?q="+pos.lat+","+pos.lng);
+if($("bill").value)L.push("Monthly electric bill: PHP "+$("bill").value);
+L.push("Package interest: "+$("pkg").value);if($("how").value)L.push("Heard about us from: "+$("how").value);
+if($("more").value.trim())L.push("Notes: "+$("more").value.trim());return L.join("\n")}
+function showDone(sent){$("form").style.display="none";$("done").style.display="block";var s=summary();$("sum").value=s;
+if(sent){$("dt").textContent="Thank you!";$("dp").textContent="We got your details and will be in touch. You can also message us on Facebook anytime.";$("mail").style.display="none"}
+else{$("mail").href="mailto:"+EMAIL+"?subject="+encodeURIComponent("Solar inquiry from "+$("fn").value.trim()+" "+$("ln").value.trim())+"&body="+encodeURIComponent(s)}
+window.scrollTo({top:0,behavior:"smooth"})}
+$("form").addEventListener("submit",function(e){e.preventDefault();if(!validate())return;if($("website").value)return;
+if(FORM_ENDPOINT){var b=$("form").querySelector(".btn");b.disabled=true;b.textContent="Sending...";
+fetch(FORM_ENDPOINT,{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},body:JSON.stringify({message:summary(),name:$("fn").value+" "+$("ln").value,email:$("em").value})})
+.then(function(r){if(!r.ok)throw 0;showDone(true)}).catch(function(){b.disabled=false;b.textContent="Send my details";showDone(false)})}
+else showDone(false)});
+$("msgr").addEventListener("click",function(){var t=$("sum");t.select();try{navigator.clipboard.writeText(t.value)}catch(x){try{document.execCommand("copy")}catch(y){}}});
+$("pin").addEventListener("click",function(){var m=$("pinmsg");
+if(!navigator.geolocation){m.textContent="Your browser can't share location. You can skip this.";return}
+m.textContent="Getting your location...";
+navigator.geolocation.getCurrentPosition(function(p){pos={lat:p.coords.latitude.toFixed(6),lng:p.coords.longitude.toFixed(6)};$("pin").textContent="Location pinned ✓";$("pin").classList.add("ok");m.textContent="Thanks! Your location will be included."},
+function(){m.textContent="Couldn't get your location. You can skip this or allow location access and try again."},{enableHighAccuracy:true,timeout:10000})});
+</script>
+</body>
+</html>
