@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Zeus Solar Solutions | Ready Packages across Mindanao</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F3F6FF;--surface:#FFFFFF;--ink:#0B2478;--muted:#4A5B8C;--line:#D6DEF5;--navy:#0B2478;--blue:#1B46C2;--navy-ink:#FFFFFF;--orange:#F26B21;--gold:#FFC20E;--glow:#FFD45C;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0A1430;--surface:#13234F;--ink:#EEF2FA;--muted:#A5B2D0;--line:#26386C;--navy:#061344;--blue:#2D5BE0;--glow:#B5801F}}
+:root[data-theme="dark"]{--bg:#0A1430;--surface:#13234F;--ink:#EEF2FA;--muted:#A5B2D0;--line:#26386C;--navy:#061344;--blue:#2D5BE0;--glow:#B5801F}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 "Public Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:Archivo,system-ui,sans-serif;margin:0;line-height:1}
+a{color:var(--orange)}
+:focus-visible{outline:3px solid var(--orange);outline-offset:2px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--navy);color:var(--navy-ink)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:54px}
+nav b{font:900 17px Archivo,sans-serif;letter-spacing:.04em}
+nav b span{color:var(--gold)}
+nav a{color:var(--navy-ink);text-decoration:none;margin-left:16px;font-size:14px}
+.hero{background:radial-gradient(circle at 8% 0%,var(--glow) 0,transparent 38%),var(--bg);padding:56px 0 40px}
+.hero h1{font-size:clamp(44px,9vw,92px);font-weight:900;max-width:9ch}
+.hero h1 em{font-style:normal;color:var(--orange)}
+.hero p{max-width:50ch;color:var(--muted);font-size:18px;margin:18px 0 24px}
+.btn{display:inline-block;background:var(--gold);color:#0B2478;font-weight:700;padding:12px 22px;border-radius:6px;text-decoration:none;margin:0 8px 8px 0}
+.btn.navy{background:var(--navy);color:#fff;border:1px solid var(--line)}
+section{padding:44px 0}
+h2.t{font-size:clamp(28px,5vw,42px);font-weight:900;margin-bottom:8px}
+.lead{color:var(--muted);max-width:60ch;margin:0 0 26px}
+.grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(310px,1fr))}
+.pkg{background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;display:flex;flex-direction:column}
+.tags{display:flex;gap:6px;padding:18px 18px 0;font:800 13px Archivo,sans-serif}
+.tags span{padding:5px 14px;transform:skewX(-14deg)}
+.tags .a{background:var(--navy);color:#fff}.tags .b{background:var(--orange);color:#fff}
+.pkg h3{padding:14px 18px 0;font-size:56px;font-weight:900}
+.pkg h3 small{display:block;font-size:24px;color:var(--orange);margin-top:2px}
+.price{margin:16px 18px;background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff;border-radius:10px;padding:12px 18px;font:900 34px Archivo,sans-serif}
+.price small{display:block;font:700 13px Archivo,sans-serif;color:var(--gold)}
+.pkg ul{list-style:none;margin:0;padding:0 18px}
+.pkg li{display:flex;gap:12px;align-items:center;padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+.pkg li i{flex:none;width:34px;height:34px;border-radius:50%;background:var(--navy);display:grid;place-items:center;font-style:normal;font-size:16px}
+.pkg li b{font-weight:600}
+.pkg li span{display:block;color:var(--muted);font-size:13px}
+.mob{margin-top:auto;background:var(--navy);color:#fff;padding:12px 18px;font:800 13px Archivo,sans-serif;display:flex;justify-content:space-between;gap:10px;align-items:center}
+.mob b{color:var(--gold);font-size:16px}
+.mob a{background:var(--gold);color:#0B2478;font-weight:700;text-decoration:none;padding:7px 14px;border-radius:6px;font:600 13px "Public Sans",sans-serif}
+.calc{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px}
+select,input[type=number]{padding:8px;font:inherit;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink)}
+input[type=number]{width:64px}
+.tbl{overflow-x:auto;margin-top:14px}
+table{width:100%;border-collapse:collapse;min-width:460px}
+th,td{text-align:left;padding:9px 8px;border-bottom:1px solid var(--line);font-size:15px}
+th{color:var(--muted);font-weight:600}
+.res{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin-top:20px}
+.res div{background:var(--bg);border-radius:8px;padding:14px}
+.res strong{display:block;font:900 26px Archivo,sans-serif}
+.note{font-size:13px;color:var(--muted)}
+.bar{height:8px;border-radius:4px;background:var(--line);margin-top:8px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--blue);width:0}
+.bar i.over{background:#C8402F}
+#msg{margin:16px 0 0;font-weight:600}
+.why{background:linear-gradient(100deg,var(--navy),var(--blue));color:#fff;padding:34px 0}
+.why .wrap{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
+.why b{display:block;color:var(--gold);font:800 15px Archivo,sans-serif;margin-bottom:4px}
+.why p{margin:0;font-size:14px;color:#D3DBEE}
+footer{background:var(--navy);color:#D3DBEE;padding:20px 0 28px;font-size:14px;border-top:1px solid #26386C}
+footer .wrap{display:flex;flex-wrap:wrap;gap:8px 28px}
+footer a{color:#fff}
+@media (max-width:560px){nav a:not(.k){display:none}.pkg h3{font-size:48px}}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><b>ZEUS <span>SOLAR</span></b><div><a href="#packages">Packages</a><a href="#calc">What can it run?</a><a class="k" href="#contact">Contact</a></div></div></nav>
+
+<header class="hero"><div class="wrap">
+<h1>Another Day, Another <em>Light!</em></h1>
+<p>Hybrid solar ready packages for homes, start-up businesses and large companies across Mindanao, based in Davao City. Panels, inverter, battery, safety equipment and installation, all in one price.</p>
+<a class="btn" href="https://www.facebook.com/ZeusSolarSolutions" target="_blank" rel="noopener">Inquire on Facebook</a><a class="btn navy" href="tel:09454338581">Call 09454338581</a>
+</div></header>
+
+<section id="packages"><div class="wrap">
+<h2 class="t">Ready Packages</h2>
+<p class="lead">Pick a size, then message us. Every package is hybrid: it runs on solar, stores power in a battery and keeps your lights on during brownouts.</p>
+<div class="grid" id="pk"></div>
+<p class="note" style="margin-top:18px">Prices as posted by Zeus. Mobilization fee may apply depending on location. Message us to confirm current pricing and availability.</p>
+</div></section>
+
+<section id="calc" style="background:var(--surface)"><div class="wrap">
+<h2 class="t">What can my package run?</h2>
+<p class="lead">Choose a package, then enter how many of each appliance you use. Wattage and hours are typical estimates; check your appliance labels. Final sizing is confirmed on site.</p>
+<div class="calc">
+<label for="sel"><b>Package:</b></label> <select id="sel"></select>
+<div class="tbl"><table><thead><tr><th>Appliance</th><th>Watts</th><th>Hours/day</th><th>Qty</th></tr></thead><tbody id="rows"></tbody></table></div>
+<div class="res">
+<div>Running load<strong id="w"></strong><span class="note" id="wl"></span><div class="bar"><i id="wb"></i></div></div>
+<div>Daily energy<strong id="k"></strong><span class="note" id="kl"></span><div class="bar"><i id="kb"></i></div></div>
+</div>
+<p id="msg" role="status"></p>
+</div></div></section>
+
+<div class="why"><div class="wrap">
+<div><b>Service areas</b><p>Mindanao-wide, based in Davao City</p></div>
+<div><b>Quality products</b><p>Durable. Reliable. Built for long-term performance.</p></div>
+<div><b>Professional installation</b><p>Expert team. Safe works. Clean and efficient.</p></div>
+<div><b>After-sales support</b><p>We're here for you, before and after installation.</p></div>
+</div></div>
+
+<footer id="contact"><div class="wrap">
+<a href="https://www.facebook.com/ZeusSolarSolutions" target="_blank" rel="noopener">Facebook: Zeus Solar Solutions</a>
+<a href="mailto:jj.zeussolarsolutions@gmail.com">jj.zeussolarsolutions@gmail.com</a>
+<a href="tel:09454338581">09454338581</a>
+<span>© Zeus Solar Solutions, Davao City. Specifications and power estimates are guides only.</span>
+</div></footer>
+
+<script>
+var P=[
+{kw:"3KW",price:95000,inv:3000,kwp:1.8,bat:2.56,list:[["⚡","3KW Hybrid Inverter","One-Solar"],["☀️","Jinko Solar Panels","3 pcs × 600Wp (1.8 kWp)"],["🔋","24V 100AH Battery","LiFePO4, about 2.5 kWh"],["🛡️","Safety Equipment",""],["🔧","Installation Fee",""]]},
+{kw:"6KW",price:210000,inv:6000,kwp:3.125,bat:5.12,list:[["☀️","Jinko Solar Panel 625W","5 pcs × 625Wp (3.125 kWp)"],["⚡","6KW Hybrid System","Solis"],["🔋","Dyness 51.2V 100AH","Lithium, about 5 kWh"],["🛡️","Safety Equipment",""],["🔧","Installation Fee",""]]},
+{kw:"8KW",price:369000,inv:8000,kwp:6.25,bat:16.07,list:[["☀️","Jinko Solar Panel 625W","10 pcs × 625Wp (6.25 kWp)"],["⚡","8KW Hybrid System","Solis"],["🔋","Dyness 51.2V 314AH","Lithium, about 16 kWh"],["🛡️","Safety Equipment",""],["🔧","Installation Fee",""]]},
+{kw:"10KW",price:429000,inv:10000,kwp:11.25,bat:16.07,list:[["☀️","Jinko Solar Panel 625W","18 pcs × 625Wp (11.25 kWp)"],["⚡","10KW Hybrid System","Solis"],["🔋","Dyness 51.2V 314AH","Lithium, 1 pc, about 16 kWh"],["🛡️","Safety Equipment",""],["🔧","Installation Fee",""]]}];
+var pk=document.getElementById("pk"),sel=document.getElementById("sel");
+P.forEach(function(p,i){
+var a=document.createElement("article");a.className="pkg";
+a.innerHTML="<div class='tags'><span class='a'>HYBRID</span><span class='b'>INQUIRE NOW!</span></div><h3>"+p.kw+"<small>READY PACKAGE</small></h3><div class='price'>₱"+p.price.toLocaleString()+".00<small>PHP</small></div><ul>"+p.list.map(function(l){return "<li><i>"+l[0]+"</i><div><b>"+l[1]+"</b>"+(l[2]?"<span>"+l[2]+"</span>":"")+"</div></li>"}).join("")+"</ul><div class='mob'><div>MOBILIZATION FEE<br><b>MAY APPLY</b></div><a href='https://www.facebook.com/ZeusSolarSolutions' target='_blank' rel='noopener'>Inquire now</a></div>";
+pk.appendChild(a);
+var o=document.createElement("option");o.value=i;o.textContent=p.kw+" Ready Package";sel.appendChild(o)});
+sel.value=1;
+var items=[["LED bulb",10,6,8],["Electric fan",60,8,2],["Television",100,5,1],["Refrigerator (avg. running)",150,10,1],["Laptop",60,6,1],["Rice cooker",700,1,0],["Washing machine",500,1,0],["Water pump",750,1,0],["Electric iron",1000,.5,0],["Inverter aircon 1.5HP",1000,8,1]];
+var tb=document.getElementById("rows");
+items.forEach(function(it,i){var r=document.createElement("tr");r.innerHTML="<td>"+it[0]+"</td><td>"+it[1]+" W</td><td>"+it[2]+"</td><td><input type='number' min='0' max='50' value='"+it[3]+"' aria-label='"+it[0]+" quantity' data-i='"+i+"'></td>";tb.appendChild(r)});
+function $(id){return document.getElementById(id)}
+function calc(){var p=P[sel.value],w=0,k=0,lo=p.kwp*3.5,hi=p.kwp*4.3;
+tb.querySelectorAll("input").forEach(function(e){var q=Math.max(0,+e.value||0),it=items[e.dataset.i];w+=q*it[1];k+=q*it[1]*it[2]/1000});
+$("w").textContent=w.toLocaleString()+" W";$("wl").textContent="Inverter limit "+p.inv.toLocaleString()+" W";
+$("k").textContent=k.toFixed(1)+" kWh";$("kl").textContent="Solar makes about "+lo.toFixed(0)+" to "+hi.toFixed(0)+" kWh/day";
+$("wb").style.width=Math.min(100,w/p.inv*100)+"%";$("kb").style.width=Math.min(100,k/hi*100)+"%";
+$("wb").className=w>p.inv?"over":"";$("kb").className=k>hi?"over":"";
+var m=$("msg");
+if(w>p.inv)m.textContent="These can't all run at once on this package. Use fewer at the same time, or pick a larger one.";
+else if(k>hi)m.textContent="Daily use is more than this package's panels usually make. Try a larger package.";
+else if(k>p.bat+lo/2)m.textContent="Fine for daytime. Evening use may go beyond the battery (about "+p.bat.toFixed(0)+" kWh), so we would check your night load.";
+else m.textContent="This load fits the "+p.kw+" Ready Package.";}
+tb.addEventListener("input",calc);sel.addEventListener("change",calc);calc();
+</script>
+</body>
+</html>
