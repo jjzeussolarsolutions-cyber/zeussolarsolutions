@@ -23,7 +23,10 @@ nav b{font:900 17px Archivo,sans-serif;letter-spacing:.04em}
 nav b span{color:var(--gold)}
 nav a{color:var(--navy-ink);text-decoration:none;margin-left:16px;font-size:14px}
 .hero{background:radial-gradient(circle at 8% 0%,var(--glow) 0,transparent 38%),var(--bg);padding:56px 0 40px}
-.hero h1{font-size:clamp(44px,9vw,92px);font-weight:900;max-width:9ch}
+.hg{display:grid;gap:40px;align-items:center;grid-template-columns:1.05fr 1fr}
+.hero h1{font-size:clamp(40px,6.4vw,78px);font-weight:900;max-width:9ch}
+.hshot img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:16px;box-shadow:10px 10px 0 var(--gold)}
+@media (max-width:820px){.hg{grid-template-columns:1fr;gap:32px}.hshot{margin-right:10px}}
 .hero h1 em{font-style:normal;color:var(--orange)}
 .hero p{max-width:50ch;color:var(--muted);font-size:18px;margin:18px 0 24px}
 .btn{display:inline-block;background:var(--gold);color:#0B2478;font-weight:700;padding:12px 22px;border-radius:6px;text-decoration:none;margin:0 8px 8px 0}
@@ -70,6 +73,7 @@ th{color:var(--muted);font-weight:600}
 footer{background:var(--navy);color:#D3DBEE;padding:20px 0 28px;font-size:14px;border-top:1px solid #26386C}
 footer .wrap{display:flex;flex-wrap:wrap;gap:8px 28px}
 footer a{color:#fff}
+.vids{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));justify-items:center}.vid{width:100%;max-width:340px;margin:0 auto;aspect-ratio:9/16;border-radius:12px;overflow:hidden;border:1px solid var(--line);background:var(--navy)}.vid iframe{width:100%;height:100%;border:0}
 @media (max-width:420px){nav b{font-size:14px}}
 @media (max-width:560px){nav a:not(.k){display:none}.pkg h3{font-size:48px}}
 </style>
@@ -77,10 +81,13 @@ footer a{color:#fff}
 <body>
 <nav><div class="wrap"><b>ZEUS <span>SOLAR</span> SOLUTIONS</b><div><a href="#packages">Packages</a><a href="onboarding.html">Free quote</a><a href="#calc">What can it run?</a><a class="k" href="#contact">Contact</a></div></div></nav>
 
-<header class="hero"><div class="wrap">
+<header class="hero"><div class="wrap hg">
+<div>
 <h1>Another Day, Another <em>Light!</em></h1>
 <p>Hybrid solar ready packages for homes, start-up businesses and large companies across Mindanao, based in Davao City. Panels, inverter, battery, safety equipment and installation, all in one price.</p>
 <a class="btn" href="onboarding.html">Request a free quote</a><a class="btn navy" href="https://www.facebook.com/ZeusSolarSolutions" target="_blank" rel="noopener">Inquire on Facebook</a><a class="btn navy" href="tel:09454338581">Call 09454338581</a>
+</div>
+<div class="hshot"><img src="zeus-hero.jpg" width="1200" height="900" alt="Zeus Solar Solutions installer waving beside a newly installed rooftop solar array" fetchpriority="high"></div>
 </div></header>
 
 <section id="packages"><div class="wrap">
@@ -88,6 +95,13 @@ footer a{color:#fff}
 <p class="lead">Pick a size, then message us. Every package is hybrid: it runs on solar, stores power in a battery and keeps your lights on during brownouts.</p>
 <div class="grid" id="pk"></div>
 <p class="note" style="margin-top:18px">Prices as posted by Zeus Solar Solutions. Mobilization fee may apply depending on location. Message us to confirm current pricing and availability.</p>
+</div></section>
+
+<section id="video"><div class="wrap" style="text-align:center">
+<h2 class="t">See our work</h2>
+<p class="lead" style="margin-left:auto;margin-right:auto">Watch videos from the Zeus Solar Solutions Facebook page.</p>
+<div class="vids"><div class="vid"><iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fshare%2Fr%2F1C5fmEgckW%2F&show_text=false&width=340" title="Zeus Solar Solutions video 1" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe></div><div class="vid"><iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fshare%2Fv%2F1DyrUhgim9%2F&show_text=false&width=340" title="Zeus Solar Solutions video 2" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe></div><div class="vid"><iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fshare%2Fv%2F1Dc4pGp14R%2F&show_text=false&width=340" title="Zeus Solar Solutions video 3" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe></div></div>
+<p class="note" style="margin-top:14px">Videos not showing? Watch on Facebook: <a href="https://www.facebook.com/share/r/1C5fmEgckW/" target="_blank" rel="noopener">Video 1</a> &middot; <a href="https://www.facebook.com/share/v/1DyrUhgim9/" target="_blank" rel="noopener">Video 2</a> &middot; <a href="https://www.facebook.com/share/v/1Dc4pGp14R/" target="_blank" rel="noopener">Video 3</a></p>
 </div></section>
 
 <section id="calc" style="background:var(--surface)"><div class="wrap">
